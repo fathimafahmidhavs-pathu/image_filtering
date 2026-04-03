@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Image Filter App
+
+A real-time image filtering web app built with Next.js. Upload an image and apply filters instantly with a live preview, then download the result.
+
+## Features
+
+- Drag-and-drop or file picker image upload
+- Nine filters applied via canvas pixel manipulation:
+  - Grayscale
+  - Sepia
+  - Invert
+  - Brightness / Contrast (slider-controlled)
+  - Fade
+  - Cross-Process
+  - Barrel / Pincushion Distortion
+  - Ripple / Wave
+  - Swirl
+- Download filtered image
+
+## Tech Stack
+
+- Next.js 16 (client-rendered)
+- React 19
+- TypeScript
+- Tailwind CSS
+- HTML5 Canvas (ImageData API)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+cd frontend
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev       # Start development server
+npm run build     # Build for production
+npm run test      # Run unit tests (Vitest)
+npm run lint      # Lint code
+```
 
-## Learn More
+## Color Scheme
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Token          | Hex       | Usage                          |
+|----------------|-----------|--------------------------------|
+| Accent Teal    | `#0acfcf` | Active filter, hover states    |
+| Dark Primary   | `#1a1a2e` | Page background                |
+| Surface Card   | `#16213e` | Filter panel, toolbar          |
+| Purple Accent  | `#7b2ff7` | Download button, key actions   |
+| Gray Text      | `#a0a0b0` | Labels, inactive filters       |
